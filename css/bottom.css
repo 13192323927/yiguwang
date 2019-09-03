@@ -1,0 +1,121 @@
+/* 尾部 */
+#bottom {
+    width: 100%;
+    margin: 0px auto;
+    background: #fff;
+    float: left;
+    padding-bottom: 20px;
+}
+.copy {
+    background: #fff;
+    text-align: center;
+    clear: both;
+    margin-top: 20px;
+}
+.links {
+    background: #dde0dc;
+    line-height: 49px;
+    color: #999;
+    font-size: 13px;
+    color: #3e3e3e;
+}
+.links ul {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 200%;
+}
+.links ul li {
+    width: 24.5%;
+    display: inline-table;
+    padding: 16px 0;
+}
+.links ul li strong {
+    font-size: 16px;
+    padding-left: 72px;
+}
+.links ul li p {
+    font-size: 13px;
+    line-height: 150%;
+    padding: 5px 10px 5px 72px;
+}
+.links ul li.i-xian {
+    background: url(../img/icon/icon-xian.png) no-repeat left center;
+}
+.links ul li.i-kuai {
+    background: url(../img/icon/icon-kuai.png) no-repeat left center;
+}
+.links ul li.i-fu {
+    background: url(../img/icon/icon-fu.png) no-repeat left center;
+}
+.links ul li.i-tui {
+    background: url(../img/icon/icon-tui.png) no-repeat left center;
+}
+
+.b-menu {
+    text-align: center;
+    padding: 20px 0 50px 0;
+    width: 1140px;
+    margin: 0 auto;
+}
+.b-menu dl {
+    float: left;
+    width: 170px;
+    display: inline-table;
+    padding-left: 30px;
+    text-align: left;
+    line-height: 26px;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.b-menu dl dt {
+    font-size: 14px;
+    font-weight: bold;
+}
+.b-menu dl.c1 {
+    background: url(../img/icon/icon-shop.png) no-repeat left top;
+}
+.b-menu dl.c2 {
+    background: url(../img/icon/icon-fw2.png) no-repeat left top;
+}
+.b-menu dl.c3 {
+    background: url(../img/icon/icon-fw3.png) no-repeat left top;
+}
+.b-menu dl.c4 {
+    background: url(../img/icon/icon-fw4.png) no-repeat left top;
+}
+.b-menu dl.c5 {
+    background: url(../img/icon/icon-fw5.png) no-repeat left top;
+}
+.b-tel {
+    float: right;
+    padding: 10px 20px 20px 0;
+}
+.t-menu {
+    padding: 2px 0 30px;
+    color: #999;
+    background: #fdfdfd;
+    border-top: 1px solid #eee;
+    height: auto;
+    line-height: 26px;
+    font-size: 12px;
+}
+.t-menu p {
+    display: block;
+    line-height: 160%;
+    padding-top: 10px;
+}
+.t-menu p.m a {
+    padding: 0 12px;
+    border-left: 1px solid #ccc;
+    line-height: 22px;
+}
+.t-menu p.m a.f {
+    border-left: 0;
+}
+
+.authentication a img {
+    width: 130px;
+    height: 50px
+}

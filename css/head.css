@@ -1,0 +1,169 @@
+
+.top-info {
+    height: 30px;
+    background: #fff;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #666;
+    line-height: 30px;
+    border-bottom: 1px solid #f8f8f8;
+    position: relative;
+    z-index: 9999999999999999999999;
+}
+.top-info .welcome {
+    float: left;
+    color: #bbb;
+}
+
+.top-info .welcome a {
+    display: inline-table;
+    background: url(../img/icon/icon-xx.png) no-repeat 6px center;
+    padding-left: 20px;
+}
+.top-info ul {
+    float: right;
+}
+.top-info ul li {
+    display: inline-table;
+    padding: 0 10px;
+    background: url(../img/icon/line-l.png) no-repeat right center;
+}
+.top-info ul li.erwm {
+    background: url(../img/icon/icon-erwm.png) no-repeat 15px center;
+    padding: 0 5px 0 32px;
+    position: relative;
+    z-index: 999;
+}
+.top-info ul li.erwm img {
+    display: none;
+    position: absolute;
+    top: 26px;
+    left: 0px;
+}
+
+font {
+    color: rgb(0, 128, 0);
+}
+.top-bj {
+    background: #fff;
+    height: 252px;
+}
+.adtop {
+    height: 118px;
+    position: relative;
+    overflow: hidden;
+}
+.adt {
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+    height: 118px;
+}
+.adt .ad {
+    width: 100% !important;
+    height: 118px;
+}
+.logo-title {
+    float: left;
+    width: 320px;
+    background: url(../img/icon/logo.png) no-repeat left center;
+    height: 46px;
+    margin-top: 25px;
+    white-space: normal;
+    overflow: hidden;
+}
+.search{
+    width: 1200px;
+    margin: 0 auto;
+    height: 100px
+}
+.logo-title a {
+    white-space: nowrap;
+    display: block;
+    padding-left: 320px;
+    line-height: 60px;
+}
+.search-box {
+    float: left;
+    background: #fff;
+    width: 520px;
+    height: 30px;
+    margin: 30px 0 0 0px;
+    font-size: 13px;
+    position: relative;
+}
+.s-input {
+    float: left;
+    line-height: 28px;
+    height: 28px;
+    border: 1px solid #bdbdbd;
+    border-right: 0;
+    color: #999;
+    padding-left: 10px;
+    width: 430px;
+}
+.s-btn {
+    float: left;
+    width: 76px;
+    height: 30px;
+    background: #fb1116;
+    cursor: pointer;
+    color: #fff;
+}
+.search-box p {
+    top: 28px;
+    position: absolute;
+    z-index: 32;
+    line-height: 30px;
+    font-size: 12px;
+    color: #5a5a5a;
+}
+.search-box p a {
+    padding: 0 8px;
+    color: #5a5a5a;
+}
+.egu_shop_cart {
+    float: left;
+    margin: 35px 0 0 116px;
+    display: inline;
+    width: 119px;
+    height: 30px;
+    background: #fbfbfb;
+    position: relative;
+}
+.egu_shop_cart i {
+    background: #e61117;
+    font-size: 10px;
+    line-height: 12px;
+    font-style: normal;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    z-index: 999;
+    left: -2px;
+    top: -3px;
+    border-radius: 6px;
+    height: 12px;
+    min-width: 12px;
+}
+.egu_shop_cart span {
+    display: inline-table;
+    color: #b3b3b3;
+    font-size: 12px;
+    background: url(../img/icon/icon-shop.png) no-repeat 12px center;
+    padding-left: 46px;
+    line-height: 30px;
+}
+.icon-erwm{
+    padding:35px 0 0 35px;
+    display: inline-table;
+    font-size: 12px;
+    color: #666;
+    padding-left: 10px;
+    top: -80px;
+    right: 5px;
+    z-index: 555;
+    width: 80px;
+    text-align: center;
+    line-height: 24px;
+}

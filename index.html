@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    
+
+    <link rel="stylesheet" href="./lib/dist/css/swiper.min.css">
+
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/dist/js/swiper.min.js"></script>
+    <script src="./js/index.js"></script>
+
+</head>
+<style>
+    .mtime-box .swiper-container .swiper-pagination {
+        width: 100%;
+        margin: 0 auto;
+        /* height: 100px; */
+    }
+
+    /* .swiper-slide img {
+        width: 100%;
+        height: 467px;
+
+    } */
+</style>
+
+<body>
+    <!-- 右侧快捷键 -->
+    <iframe src="./html/quick.html" id="middle" scrolling="no" style="vertical-align:bottom; position: fixed; height: 100%; right: 0px;z-index: 999"></iframe>
+    <div class=" main-body">
+        <!-- 引入页头 -->
+        <iframe src="./html/head.html" id="middle" scrolling="no" width="100%" height="282px" style="vertical-align:bottom;"></iframe>
+        <!-- 导航 -->
+        <div id="index_Slide" class="margin-t-40">
+            <div class="w12">
+                <div class="nav-box">
+                    <div class="class-menuBox">
+                        <div class="title">全部商品</div>
+                        <ul class="nav-left">
+                            <li>
+                                <span>
+                                    <a>新鲜水果</a>
+                                    <p>
+                                        <a>西瓜</a>
+                                        <a>蓝莓</a>
+                                        <a>椰子</a>
+                                        <a>京奇异果</a>
+                                    </p>
+                                </span>
+                                <div class="nav-right" style="display: none">
+                                    <dl>
+                                        <dt>
+                                            <a>奇异果/车厘子</a>
+                                            <i></i>
+                                        </dt>
+                                        <dd>
+                                            <a>金奇异果</a>
+                                            <a>绿奇异果/猕猴桃</a>
+                                            <a>车厘子/樱桃</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="nav-menu">
+                        <li class="first cur">
+                            <a>主页</a>
+                        </li>
+                        <li>
+                            <a>安心宅配</a>
+                        </li>
+                        <li>
+                            <a>特色预定</a>
+                        </li>
+                        <li>
+                            <a>卡卷兑换</a>
+                        </li>
+                        <li>
+                            <a>企业定制</a>
+                        </li>
+                        <li>
+                            <a>活动专享</a>
+                        </li>
+                        <li>
+                            <a>依谷咨询</a>
+                        </li>
+                        <li>
+                            <a>依谷扶贫</a>
+                        </li>
+                        <li>
+                            <a>依谷公益</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+            <div class="banner-box">
+
+
+
+
+                <div class="mtime-box">
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/icon/index01.jpg" style=" width: 100%;height: 467px;">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/icon/index02.jpg" style=" width: 100%;height: 467px;">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/icon/index03.jpg" style=" width: 100%;height: 467px;">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <!-- <div class="swiper-button-prev"></div> -->
+                        <!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+                        <!-- <div class="swiper-button-next"></div> -->
+                        <!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
+                    </div>
+                    <script>
+                        var mySwiper = new Swiper('.swiper-container', {
+                            autoplay: true,//可选选项，自动滑动
+                            loop: true,
+                            navigation: {
+                                // nextEl: '.swiper-button-next',
+                                // prevEl: '.swiper-button-prev',
+                            },
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true,
+
+                            },
+                        })
+                    </script>
+
+
+                </div>
+
+
+
+                <div class="w12 pr">
+                    <div class="notice">
+                        <a target="_blank">
+                            <img src="./img/index/0099.jpg" width="204px" height="467px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="main1200">
+                <div class="list4">
+                    <ul>
+                        <li>
+                            <a>
+                                <img src="./img/index/ad-pic01.jpg" width="280px" height="101px">
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="./img/index/ad-pic02.jpg" width="280px" height="101px">
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src="./img/index/ad-pic03.jpg" width="280px" height="101px">
+                            </a>
+                        </li>
+                        <li style="padding-right:0">
+                            <a>
+                                <img src="./img/index/ad-pic04.jpg" width="280px" height="101px">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="floor0" class="new_cp">
+                    <span class="tt">
+                        <img src="./img/index/ad-pic05.jpg" width="192px" height="320px">
+                    </span>
+                    <div class="newcp">
+                        <div class="tempWrap">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <ul class="clone" style="float: left; width: 1008px;height: 320px">
+                                        </ul>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <ul class="clone" style="float: left; width: 1008px;height: 320px">
+                                        </ul>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <ul class="clone" style="float: left; width: 1008px;height: 320px">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ulWrap">
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+                <script>
+                    var mySwiper = new Swiper('.swiper-container', {
+                        autoplay: true,//可选选项，自动滑动
+                        loop: true,
+                        navigation: {
+                            // nextEl: '.swiper-button-next',
+                            // prevEl: '.swiper-button-prev',
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+
+                        },
+                    })
+                </script>
+               
+
+            </div>
+        </div>
+
+        <!-- 主体部分 -->
+        <div class="lmt-title">
+            <h3>鲜/依/谷/厚/生/活 </h3>
+            <p>
+                <em class="lse">fresh egu</em>
+                Prosperous life
+            </p>
+        </div>
+        <div id="navList">
+            <div class="ht-clss bj01" title="新鲜水果" id="floor1">
+                <ul>
+                    <li>
+                        <a>西瓜</a>
+                    </li>
+                    <li>
+                        <a>蓝莓</a>
+                    </li>
+                    <li>
+                        <a>椰子</a>
+                    </li>
+                    <li>
+                        <a>金奇异果</a>
+                    </li>
+                    <li>
+                        <a>香蕉</a>
+                    </li>
+                    <li>
+                        <a>进口苹果</a>
+                    </li>
+                </ul>
+                <div class="cad-b">
+                    <a>
+                        <img src="./img/index/bfaaaf416e2440f5b313e29e9d934a66.jpg" title alt width="391px" height="295px">
+                    </a>
+                </div>
+                <div class="cad-a">
+                    <a>
+                        <img src="./img/index/0183db9375a843f6a5dd868d5aa2bbe3.jpg" title alt width="610px" height="295px">
+                    </a>
+                </div>
+                <a class="more">查看更多>></a>
+            </div>
+            <div class="products-box bj_bj01">
+                <ul>
+                </ul>
+                <div class="clear"></div>
+            </div>
+
+
+
+
+
+
+            <div class="ht-clss bj02"  title="绿色菜篮" id="floor1">
+                    <ul>
+                        <li>
+                            <a>叶菜</a>
+                        </li>
+                        <li>
+                            <a>进口牛肉</a>
+                        </li>
+                        <li>
+                            <a>乌骨鸡</a>
+                        </li>
+                        <li>
+                            <a>肉丸</a>
+                        </li>
+                        <li>
+                            <a>鸡蛋</a>
+                        </li>
+                        <li>
+                            <a>小龙虾</a>
+                        </li>
+                    </ul>
+                    <div class="cad-b">
+                        <a>
+                            <img src="./img/icon/ht_03.jpg" title alt width="391px" height="295px">
+                        </a>
+                    </div>
+                    <div class="cad-a">
+                        <a>
+                            <img src="./img/icon/ht_04.jpg" title alt width="610px" height="295px">
+                        </a>
+                    </div>
+                    <a class="more">查看更多>></a>
+                </div>
+                <div class="products-box bj_bj02">
+                    <ul>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+    
+
+
+
+        </div>
+
+        <!-- 尾部 -->
+        <iframe src="./html/bottom.html" id="middle" scrolling="no" width="100%" height="510px" style="border:0px;padding:0px;margin:0px">
+    </div>
+    </div>
+
+</body>
+
+<script>
+
+    // alert('a')
+    // console.log('a')
+    // $.get('./api/php/register.php', { 'froms': 'commodity', 'content': '5','operation': 'random' }, function (res) {
+    //     console.log(res)
+    // })
+
+</script>
+
+</html>

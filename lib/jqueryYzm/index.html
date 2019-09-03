@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <title>随机验证码</title>
+  <style>
+    .input-code {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <input type="text" class="input-code" placeholder="验证码">
+  <span class="code"  title='点击切换'></span>
+
+</div>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="js/jquery.code.js"></script>
+<script>
+  $(function () {
+    $('.code').createCode({
+      len:6
+    });
+  });
+	
+
+	
+  $('.input-code').blur(function () {
+    if($(this).val().toLowerCase()!==$('.code').children('input').val().toLowerCase()){
+      alert('验证码不正确')
+    }else{
+      alert('验证通过')
+    }
+  })
+</script>
+</body>
+</html>

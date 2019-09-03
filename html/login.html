@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/jq/jquery-3.4.1.min.js"></script>
+    <script src="../lib/jqueryYzm/js/jquery.code.js"></script>
+    <script src="../js/login.js"></script>
+    <style>
+    .amdin-login-nr-k-x-r  .code ,.amdin-login-nr-k-x-r  .code span{
+        font-size: 30px;
+        text-align: center;
+        padding: 0 auto 0;
+        box-sizing: border-box;
+    }
+    </style>
+</head>
+
+<body>
+    <form id="s_form" method="post">
+        <div class="amdin-login-bg">
+            <img style="position: fixed;" src="../img/icon/admin-bg.jpg" height="100%" width="100%">
+        </div>
+        <div class="amdin-login-main"></div>
+        <div class="amdin-login-nr">
+            <ul>
+                <li>
+                    <a href="/" target="_self">
+                        <img src="../img/icon/logo_login.png" alt="点击进入依谷网">
+                    </a>
+                </li>
+                <li class="amdin-login-nr-wz">
+                    登录
+                    <span>
+                        还没有账号？
+                        <a href="../html/regin.html">注册</a>
+                    </span>
+                </li>
+                <li>
+                    <strong>
+                        <img src="../img/icon/register_01.png">
+                    </strong>
+                    <input type="text" id="name" name="membername" class="amdin-login-nr-k  log_num" placeholder="手机号码/用户名">
+                </li>
+                <li id="name_tips">&nbsp;</li>
+                <li>
+                    <strong>
+                        <img src="../img/icon/register_02.png">
+                    </strong>
+                    <input type="password" id="pwd" name="memberpwd" class="amdin-login-nr-k log_pwd" placeholder="密码">
+                </li>
+                <li id="pwd_tips">&nbsp;</li>
+                <li>
+                    <h1 style="position: relative;  top: 8px;font-size: 16px;">验证码</h1>
+                    <input type="text" id="r_code" name="r_code" class="amdin-login-nr-k-x input-code" maxlength="4" placeholder="验证码">
+                    <div class="amdin-login-nr-k-x-r">
+                        <!-- <img id="rc" class="code" style="margin-left: 0;margin-top: 0;padding-left: 0;padding-top: 0" alt="验证码" title="验证码"> -->
+                        <span class="code"  title='点击切换'></span>
+                    </div>
+                </li>
+                <li>&nbsp;</li>
+                <li>
+                    <div class="squaredTwo">
+                            <label style="z-index: -1">
+                                <a></a>
+                            </label>
+                        <input type="checkbox" value="none" id="squaredTwo" style="width: 100%;height: 100%;opacity: 0;"   name="check">
+                       
+                        <!-- for="squaredTwo" -->
+                    </div>
+                    <h1>记住我</h1>
+                    <span>
+                        <a href="" style="color: #ffffff">忘记密码？</a>
+                    </span>
+                </li>
+                <li>
+                    <a>
+                        <div class="amdin-login-nr-login">
+                            <font style="color: #333;font-size: 20px">登录</font>
+                            <input id="redirect_uri" value="/myEgu.action" type="hidden">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <img width="100%" src="../img/icon/admin-login-san.png">
+                </li>
+            </ul>
+            <div class="login_img">
+                <a>
+                    <img src="../img/icon/login_sina.png">
+                </a>
+                <a>
+                    <img border="0" alt="QQ登录" src="../img/icon/login_qq.png">
+                </a>
+                <a>
+                    <img src="../img/icon/login_dou.png">
+                </a>
+            </div>
+        </div>
+    </form>
+</body>
+<script>
+    
+  </script>
+</html>

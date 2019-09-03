@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="../lib/dist/css/swiper.min.css">
+
+    <script src="../lib/jquery-3.4.1.min.js"></script>
+    <script src="../lib/dist/js/swiper.min.js"></script>
+    <script src="../js/detail.js"></script>
+
+</head>
+
+<body>
+    <!-- 右侧快捷键 -->
+    <iframe src="../html/quick.html" id="middle" scrolling="no" style="vertical-align:bottom; position: fixed; height: 100%; right: 0px;z-index: 999"></iframe>
+    <!-- 页头 -->
+    <iframe src="../html/head.html" id="middle" scrolling="no" width="100%" height="282px" style="vertical-align:bottom;"></iframe>
+    <!-- 导航 -->
+    <iframe class="nav" src="../html/nav.html" id="middle" scrolling="no" width="100%" style="vertical-align:bottom;filter:chroma(color=#ffffff);position:absolute;z-index: 9999999;"></iframe>
+    <!-- 主体 -->
+    
+    <script>
+        $('.nav').mouseenter(function () { 
+            $('.nav').css('height','320px')
+         })
+         $('.nav').mouseleave(function () { 
+            $('.nav').css('height','41px')
+          })
+        // let a = $(".nav").contents().find("body").html();
+
+    //     $(function () { 
+    //         var $doc = jQuery('.nav').contents('.menu'); 
+            
+    // console.log($doc )
+             //all-sort
+        //  })
+
+       
+        // console.log( )
+    </script>
+    <div class="main1350">
+        <!-- 产品图片预览（放大镜） -->
+        <div class="cp-img-box">
+            <div class="cp-img-box">
+                <div class="jqzoom" id="spec-n1">
+                    <img src="../img/merchandise/misile/preview/f4c9c994b1c84583a7e06421d8bc9246.jpg" width="452" height="452">
+                    <i class="fbj"></i>
+                </div>
+                <div id="spec-n5">
+                    <div id="spec-left" class="control"></div>
+                    <div id="spec-list" id="spec-list">
+                        <ul class="list-h" style="width: 234px;overflow: hidden;">
+                            <li>
+                                <img src="../img/merchandise/misile/preview/2abd00d6052441a38f9a0f44f4d17b1f.jpg" style="border: 1px solid rgb(255, 255, 255); padding: 0px;">
+                            </li>
+                            <li>
+                                <img src="../img/merchandise/misile/preview/3ff3299f4f7f411abf8f63f548f0dc78.jpg" style="border: 1px solid rgb(255, 255, 255); padding: 0px;">
+                            </li>
+                            <li>
+                                <img src="../img/merchandise/misile/preview/f4c9c994b1c84583a7e06421d8bc9246.jpg" style="border: 1px solid rgb(255, 255, 255); padding: 0px;">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="control" id="spec-right"></div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!--  end -->
+
+
+        <!-- 产品购买 -->
+        <div class="cp-attr">
+            <div class="sb-logo"> </div>
+            <h3>米斯乐黑糖麦芽饼106g
+                <span style="margin-left: 10px;font-size: 17px"></span>
+            </h3>
+            <dl class="price">
+                <dt>价格</dt>
+                <dd class="jg">
+                    <em>
+                        ￥
+                        <font>6.8</font>
+                    </em>
+                    [￥
+                    <i>7.5</i>]
+                </dd>
+                <dt>运费</dt>
+                <dd class="zy">
+                    全场满199元包邮，单笔不足运费8元起，生鲜类仅限深圳同城！
+                </dd>
+                <dt>配送</dt>
+                <dd>
+                    <select name="sendArea">
+                        <option>全国</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl class="peis">
+                <dt>时 效</dt>
+                <dd>当日16：00前下单，次日送货上门(仅限深圳同城)！</dd>
+                <dt>提 示</dt>
+                <dd>产品图片及其描述仅作参考，请您以收到的实物为准！</dd>
+                <dt>理 赔</dt>
+                <dd>收货后商品如有损坏，请您当场拍下图片，并保留相关商品，在24小时之内及时联系售后客服，以便我们给您更换完好的商品！如非质量问题，概不退换！</dd>
+            </dl>
+            <dl class="gg">
+                <dt>规格</dt>
+                <dd>
+                    <ul>
+                        <li class="c" style="font-size:10px ">106g</li>
+                    </ul>
+                </dd>
+            </dl>
+            <div class="box1">
+                <span class="fenxiang" style="float:none">收藏</span>
+            </div>
+            <div class="cp-btnbox">
+                <ul>
+                    <li>
+                        <span class="jia"></span>
+                        <span class="jian"></span>
+                    </li>
+                    <li class="inp_t">
+                        <input class="buy_num" type="text" value="1" step="border: 1px solid #e5e5e5;color:#000000;">
+                    </li>
+                </ul>
+                <a class="btn-gwc">加入购物车</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--end -->
+
+        <!-- 右侧轮播图 -->
+        <div class="right-cpjl">
+            <h4>买了又买</h4>
+            <div class="hotmall">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul style="float:left;width: 168px">
+                                <li>
+                                    <div class="img">
+                                        <a>
+                                            <img src="../img/merchandise/198f7777abe34f138ded134ac95bd2fc .jpg">
+                                        </a>
+                                    </div>
+                                    <p>
+                                        <a>我们班小米锅巴麻辣味82g</a>
+                                    </p>
+                                    <em>￥6.8</em>
+                                </li>
+                                 <li>
+                                    <div class="img">
+                                        <a>
+                                            <img src="../img/merchandise/198f7777abe34f138ded134ac95bd2fc .jpg">
+                                        </a>
+                                    </div>
+                                    <p>
+                                        <a>我们班小米锅巴麻辣味82g</a>
+                                    </p>
+                                    <em>￥6.8</em>
+                                </li>
+                                 <li>
+                                    <div class="img">
+                                        <a>
+                                            <img src="../img/merchandise/198f7777abe34f138ded134ac95bd2fc .jpg">
+                                        </a>
+                                    </div>
+                                    <p>
+                                        <a>我们班小米锅巴麻辣味82g</a>
+                                    </p>
+                                    <em>￥6.8</em>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul style="float:left;width: 168px">
+                                <li>
+                                    <div class="img">
+                                        <a>
+                                            <img src="../img/merchandise/198f7777abe34f138ded134ac95bd2fc .jpg">
+                                        </a>
+                                    </div>
+                                    <p>
+                                        <a>我们班小米锅巴麻辣味82g</a>
+                                    </p>
+                                    <em>￥6.8</em>
+                                </li>
+                                 <li>
+                                    <div class="img">
+                                        <a>
+                                            <img src="../img/merchandise/198f7777abe34f138ded134ac95bd2fc .jpg">
+                                        </a>
+                                    </div>
+                                    <p>
+                                        <a>我们班小米锅巴麻辣味82g</a>
+                                    </p>
+                                    <em>￥6.8</em>
+                                </li>
+                                 <li>
+                                    <div class="img">
+                                        <a>
+                                            <img src="../img/merchandise/198f7777abe34f138ded134ac95bd2fc .jpg">
+                                        </a>
+                                    </div>
+                                    <p>
+                                        <a>我们班小米锅巴麻辣味82g</a>
+                                    </p>
+                                    <em>￥6.8</em>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul style="float:left;width: 168px">
+                                <li>
+                                    <div class="img">
+                                        <a>
+                                            <img src="../img/merchandise/198f7777abe34f138ded134ac95bd2fc .jpg">
+                                        </a>
+                                    </div>
+                                    <p>
+                                        <a>我们班小米锅巴麻辣味82g</a>
+                                    </p>
+                                    <em>￥6.8</em>
+                                </li>
+                                 <li>
+                                    <div class="img">
+                                        <a>
+                                            <img src="../img/merchandise/198f7777abe34f138ded134ac95bd2fc .jpg">
+                                        </a>
+                                    </div>
+                                    <p>
+                                        <a>我们班小米锅巴麻辣味82g</a>
+                                    </p>
+                                    <em>￥6.8</em>
+                                </li>
+                                 <li>
+                                    <div class="img">
+                                        <a>
+                                            <img src="../img/merchandise/198f7777abe34f138ded134ac95bd2fc .jpg">
+                                        </a>
+                                    </div>
+                                    <p>
+                                        <a>我们班小米锅巴麻辣味82g</a>
+                                    </p>
+                                    <em>￥6.8</em>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- end -->
+
+        <!-- 产品推荐（轮播图） -->
+        <div class="lmt-title2">
+            <h3>依谷推荐</h3>
+        </div>
+        <div class="cp-tuijian"></div>
+        <!-- end -->
+
+        <!-- 产品推荐（搜索/推荐） -->
+        <div class="cpinfo-left">
+            <div class="xglmt-left">
+                <h5>相关分类</h5>
+                <div class="xgsearch">
+                    <input name="classKeys" id="classKeys" type="text" class="inp2">
+                    <input type="button" class="btn2">
+                </div>
+            </div>
+            <div class="xg-class">
+                <a>曲奇</a>
+                <a>蛋卷/酥饼/派</a>
+                <a>夹心饼干</a>
+                <a>威化饼干</a>
+                <a>营养饼干</a>
+            </div>
+            <div id="buyOthers">
+                <h3>浏览此商品的客户购买了</h3>
+                <ul>
+                    <li>
+                        <div class="img">
+                            <a>
+                                <img src="../img/merchandise/7c7c4f26a07b498c88f8f87b223e1aad.jpg" alt="八马入口知红茶180g" width="190px" height="190px">
+                            </a>
+                        </div>
+                        <p>
+                            <a>八马入口知红茶180g</a>
+                        </p>
+                        <em>￥200.00</em>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <a>
+                                <img src="../img/merchandise/7c7c4f26a07b498c88f8f87b223e1aad.jpg" alt="八马入口知红茶180g" width="190px" height="190px">
+                            </a>
+                        </div>
+                        <p>
+                            <a>八马入口知红茶180g</a>
+                        </p>
+                        <em>￥200.00</em>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <a>
+                                <img src="../img/merchandise/7c7c4f26a07b498c88f8f87b223e1aad.jpg" alt="八马入口知红茶180g" width="190px" height="190px">
+                            </a>
+                        </div>
+                        <p>
+                            <a>八马入口知红茶180g</a>
+                        </p>
+                        <em>￥200.00</em>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <a>
+                                <img src="../img/merchandise/7c7c4f26a07b498c88f8f87b223e1aad.jpg" alt="八马入口知红茶180g" width="190px" height="190px">
+                            </a>
+                        </div>
+                        <p>
+                            <a>八马入口知红茶180g</a>
+                        </p>
+                        <em>￥200.00</em>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <a>
+                                <img src="../img/merchandise/7c7c4f26a07b498c88f8f87b223e1aad.jpg" alt="八马入口知红茶180g" width="190px" height="190px">
+                            </a>
+                        </div>
+                        <p>
+                            <a>八马入口知红茶180g</a>
+                        </p>
+                        <em>￥200.00</em>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- end -->
+
+
+        <div class="cpinfo-right">
+            <div class="cplmt">
+                <ul>
+                    <li class="cur" id="desc_1">产品介绍</li>
+                    <li id="desc_2">产品参数</li>
+                    <li id="desc_3">售后服务</li>
+                </ul>
+                <span class="btn-jrshop">
+                    <a>加入购物车</a>
+                </span>
+            </div>
+            <div class="cp-lr" id="goodsDesc" style="display: block;">
+                <div class="cp-cont" id="defParam">
+                    <dl>
+                        <dt>名 &nbsp; &nbsp; &nbsp;称&nbsp;:&nbsp;</dt>
+                        <dd>米斯乐黑糖麦芽饼106g</dd>
+                        <dt>产 &nbsp; &nbsp; &nbsp;地&nbsp;:&nbsp;</dt>
+                        <dd>中 &nbsp; &nbsp; &nbsp;国</dd>
+                        <dt>存 &nbsp; &nbsp; &nbsp;储&nbsp;:&nbsp;</dt>
+                        <dd>常温阴凉干燥处</dd>
+                        <dt>保 &nbsp;质 &nbsp; 期&nbsp;:&nbsp;</dt>
+                        <dd>详见包装</dd>
+                        <dt>毛 &nbsp; &nbsp; &nbsp;重&nbsp;:&nbsp;</dt>
+                        <dd>106g</dd>
+                    </dl>
+                </div>
+                <div>
+                    <p class="img" id="descInfo" style="display: block; padding: 5px">
+                        <img src="../img/merchandise/misile/details/01.jpg">
+                        <img src="../img/merchandise/misile/details/02.jpg">
+                        <img src="../img/merchandise/misile/details/03.jpg">
+                        <img src="../img/merchandise/misile/details/04.jpg">
+                    </p>
+                </div>
+            </div>
+            <div class="cp-cont" id="listParam" style="display: none;">
+                <dl>
+                    <dt style="width: 15%;line-height: 35px;">名&nbsp;&nbsp;&nbsp;称：</dt>
+                    <dd style="width: 85%">米斯乐黑糖麦芽饼106g</dd>
+                </dl>
+                <dl>
+                    <dt style="width: 15%;line-height: 35px;">产&nbsp;&nbsp;&nbsp;地：</dt>
+                    <dd style="width: 85%">中国</dd>
+                </dl>
+                <dl>
+                    <dt style="width: 15%;line-height: 35px;">存&nbsp;&nbsp;&nbsp;储：</dt>
+                    <dd style="width: 85%">常温阴凉干燥处</dd>
+                </dl>
+                <dl>
+                    <dt style="width: 100%;line-height: 35px;text-align: left;margin-left: 116px;">保质期：详见包装</dt>
+                </dl>
+                <dl>
+                    <dt style="width: 15%;line-height: 35px;">毛&nbsp;&nbsp;&nbsp;重：</dt>
+                    <dd style="width: 85%">106g</dd>
+                </dl>
+            </div>
+            <div class="cp-lr" id="serveDesc" style="display: none">
+                <div style="margin-left:-2px">
+                    <div>
+                        <em>
+                            <img src="../img/icon/new_slogan_01.png" width="50">
+                        </em>
+                        <em>
+                            <b>安全食品</b>
+                            <span>官方实名认证</span>
+                        </em>
+                    </div>
+
+
+                    <div>
+                        <em>
+                            <img src="../img/icon/new_slogan_02.png" width="50">
+                        </em>
+                        <em>
+                            <b>基地直供</b>
+                            <span>食材最短供应链</span>
+                        </em>
+                    </div>
+
+                    <div>
+                        <em>
+                            <img src="../img/icon/new_slogan_03.png" width="50">
+                        </em>
+                        <em>
+                            <b>全程冷链</b>
+                            <span>食材新鲜不流失</span>
+                        </em>
+                    </div>
+
+                    <div>
+                        <em>
+                            <img src="../img/icon/new_slogan_04.png" width="50">
+                        </em>
+                        <em>
+                            <b>双重检测</b>
+                            <span>确保食材安全</span>
+                        </em>
+                    </div>
+
+                    <div>
+                        <em>
+                            <img src="../img/icon/new_slogan_05.png" width="50">
+                        </em>
+                        <em>
+                            <b>五行服务</b>
+                            <span>购物更省心省事</span>
+                        </em>
+                    </div>
+                </div>
+                <div class="float-left" style="border-bottom: 1px #eee solid; width: 98%; margin: 1%;"></div>
+                <div class="float-left margin-top text-left w98 margin-1 line-height-24 padding-big-bottom">
+                    <b class="float-left w10 text-yellow font-16 padding-bottom">商品退换货</b>
+                    <p>1、客户在收到商品后可享受“7日内无理由退货”，已标示不允许退货和鲜活易腐商品除外。</p>
+                    <p>2、因产品质量问题发生退换货时，所换商品将在约定的时间重新配送，免收物流费。</p>
+                    <p>3、因客户保存不善造成的商品损坏，我们将不予退换。</p>
+                    <p>4、如商品存在质量问题，请保留质量物品原物，依谷验货人员将在接到投诉后12小时内上门验货。您也可以登陆依谷网在会员管理处向依谷客服人员投诉，并上传质量问题图片。</p>
+                    <p>5、客户在收到商品（仅限干货类商品）48小时之内如需换货，请与依谷网客服联系，我们将在接收您的退换货请求24小时内处理，此类退换只限于没有被使用，且不损坏包装、不影响二次销售的商品，退换货所发生的路费/运费将由客户承担。</p>
+                    <p>6、水果类商品不能以外观瑕疵、个人口感为由提出退换，如因其它品质问题退货，则需提出退货理由并填写商品拒收单给送货员，所退货品交由送货员带回。您或您的委托收货人的签字表示您对商品质量及数量无异议，依谷网有权不接受以此为由的退换货。</p>
+                    <p>7、网上产品销售图片及信息仅供参照，因拍摄灯光及不同显示器色差等问题可能造成商品图片与实物有一定色差，一切以实物为准。 依谷网不接受以此为由的退换货。</p>
+                    <p>8、发生退货后，请联系我们的客服，经客服工作人员核实后会为您办理退款。我们会将货款24小时内退至您的依谷网个人帐户中，以便于下次订购时使用；对于网银支付或使用支付宝支付的客户如需将款项退至原支付账户，将在申请退款后7日内到账。</p>
+                    <p>以上规则最终解释权由依谷网所有。</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- 页尾 -->
+    <iframe src="../html/bottom.html" id="middle" scrolling="no" width="100%" height="510px" style="border:0px;padding:0px;margin:0px"></iframe>
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+    autoplay: true,//可选选项，自动滑动
+    loop : true
+        })
+</script>
+</html>

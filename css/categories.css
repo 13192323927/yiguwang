@@ -1,0 +1,242 @@
+
+
+.left-class {
+    margin-top: 80px;
+    float: left;
+    width: 168px;
+    position: relative;
+    z-index: 2;
+}
+.left-class h3 {
+    font-size: 24px;
+    color: #77b105;
+    line-height: 180%;
+    border-bottom: 1px solid #77b105;
+    font-weight: normal;
+}
+.left-class ul.li-ul {
+    padding: 10px 0;
+}
+.left-class li {
+    line-height: 220%;
+    color: #333;
+    font-size: 12px;
+}
+.menu_open {
+    cursor: pointer;
+    background: url(../img/icon/m-jt.png) no-repeat left center;
+}
+.left-class li h4 {
+    font-size: 14px;
+    line-height: 240%;
+    font-weight: normal;
+    padding-left: 20px;
+}
+.left-class li li {
+    padding-left: 20px;
+    color: #666;
+}
+.left-class li li {
+    padding-left: 20px;
+    color: #666;
+}
+
+/* 查询 */
+.cp-list {
+    margin-top: 70px;
+    position: relative;
+    padding-left: 210px;
+    z-index: 1;
+    padding-top: 15px;
+}
+.cp-class-select dl {
+    border-bottom: 1px dashed #ebebeb;
+}
+.cp-class-select dl dt, .cp-class-select dl dd {
+    display: inline-table;
+    width: 15%;
+    text-align: center;
+    padding: 7px 0;
+    line-height: 150%;
+    color: #777;
+    font-size: 13px;
+}
+.c-more {
+    color: #888;
+    padding: 15px 0 10px 0;
+    text-align: center;
+}
+.c-more a {
+    display: inline-table;
+    padding-bottom: 9px;
+    font-size: 12px;
+    color: #999;
+    background: url(../img/icon/icon-down.png) no-repeat center bottom;
+}
+
+/* 筛选 */
+.list-shaixuan {
+    background: #e7e7e7;
+    height: 33px;
+    position: relative;
+    margin-top: 10px;
+}
+.list-shaixuan li, .list-shaixuan span.m {
+    display: inline-table;
+    padding: 0 18px;
+    line-height: 33px;
+    font-size: 12px;
+    color: #555;
+}
+.list-shaixuan li {
+    cursor: pointer;
+}
+.list-shaixuan li.cur {
+    background: #ddd;
+}
+.list-shaixuan span.m {
+    display: inline-table;
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+
+/* 列表 */
+.cp-list-ul {
+    padding: 10px 0 30px 0;
+}
+.flt_left {
+    float: left;
+}
+.cp-list-ul li {
+    width: 24.9%;
+    float: left;
+    /* padding: 20px 0; */
+}
+.cp-list-ul li span {
+    display: block;
+    padding-right: 15px;
+    font-size: 14px;
+    line-height: 140%;
+    color: #777;
+}
+.cp-list-ul li span.price {
+    position: relative;
+    line-height: 54px;
+    padding: 0;
+}
+.cp-list-ul li em, .cp-list-ul li i {
+    font-style: normal;
+    display: inline-table;
+}
+.cp-list-ul li span.t {
+    font-size: 14px;
+    background: url(../img/icon/ico-crd.png) no-repeat left center;
+    padding-left: 56px;
+    line-height: 140%;
+    color: #777;
+}
+.cp-list-ul li span.price em {
+    font-size: 24px;
+    color: #fc1116;
+}
+.cp-list-ul li span.t a, .cp-list-ul li span.n a {
+    color: #666;
+    display: block;
+}
+.cp-list-ul li p {
+    font-size: 12px;
+    padding: 8px 0;
+}
+
+.cp-list-ul li p font {
+    color: #fc1116;
+    padding-right: 10px;
+}
+.cp-list-ul li p em {
+    padding: 0 6px;
+    color: #af52ef;
+}
+.Spinner {
+    float: left;
+    display: block;
+    overflow: hidden;
+    width: 120px;
+    margin: 0 6px 15px 0;
+}
+.Spinner a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ededed;
+    background-color: #fff;
+    float: left;
+    cursor: pointer;
+    outline: 0;
+}
+.Spinner a i {
+    font-style: normal;
+    background: url(../img/icon/BuynBtn.png) no-repeat;
+    display: block;
+    width: 9px;
+    height: 9px;
+    margin: 8px;
+    text-indent: 999999%;
+    overflow: hidden;
+}
+.Spinner .Amount {
+    width: 50px;
+    height: 17px;
+    padding: 4px 5px;
+    line-height: 17px;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #ededed;
+    float: left;
+    text-align: center;
+    color: #565656;
+    outline: 0;
+}
+.Spinner .DisDe i {
+    background-position: 0px -9px;
+}
+.Spinner .Increase i {
+    background-position: -9px -0px;
+}
+a.bth-jrshop {
+    display: inline-table;
+    width: 73px;
+    height: 17px;
+    padding: 4px 5px 4px 50px;
+    line-height: 17px;
+    border: 1px solid #ededed;
+    color: #565656;
+    outline: 0;
+    color: #fc1116;
+    float: left;
+    background: url(../img/icon/icon-shop.png) no-repeat 10px center;
+}
+.more-sp {
+    background: #f5f7f6;
+    border: 1px solid #dfdfdf;
+    width: 298px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    color: #888;
+    cursor: pointer;
+}
+/* .img{
+    width: 250px;
+    height: 250px;
+} */
+.img img{
+    width: 100%;
+    height: 100%;
+}
+
+.cp-list-ul-li-sel{
+    border:1px solid red;
+   padding:  0 10px 0;
+   box-sizing: border-box
+}
