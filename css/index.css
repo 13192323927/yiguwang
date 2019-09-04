@@ -329,6 +329,20 @@ font {
     text-align: center;
     line-height: 24px;
 }
+.img01 {
+    background:url(.././img/icon/index01.jpg) no-repeat center top;
+     height: 467px
+}
+
+.img02 {
+    background:url(.././img/icon/index02.jpg) no-repeat center top;
+     height: 467px
+}
+
+.img03 {
+    background:url(.././img/icon/index03.jpg) no-repeat center top;
+     height: 467px
+}
 
 
 
@@ -357,8 +371,9 @@ font {
 
 
 
-
-
+.banner-box{
+    margin-top:40px 
+}
 
 .banner-box, .banner {
     

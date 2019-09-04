@@ -1,4 +1,20 @@
 $(function () { 
+
+
+
+    $('#head').load("../html/head.html")
+
+
+
+    $('#quick').load("../html/quick.html")
+    $('#nav').load("../html/nav.html",function (response) { 
+        $('.x').remove();
+        $('.menu').css('border-bottom','0px');
+        $('.wrap').css('display','block');
+        $('.m-1208').attr('data','index')
+     })
+
+
     $.get('./api/php/register.php', { 'froms': 'commodity', 'content': '5','operation': 'random' }, function (res) {
     let json = eval(res)
     var str = json.map(function (item) {
@@ -29,8 +45,8 @@ $(function () {
             // console.log(item) 
             let previewImg = item.previewImg.split('&')[0]
             return `
-            <li>
-                        <div class="img">
+            <li data-id = '${item.commodityID}'>
+                        <div class="img" >
                             <a target="_blank">
                                 <img src="${previewImg}" width="180px" height="180px" title="">
                             </a>
@@ -48,8 +64,8 @@ $(function () {
                     </li>
             `
          }).join('');
-         console.log(str2)
-          $('.bj_bj01 ul').html(str2 + str2+str2 + str2)
+        //  console.log(str2)
+          $('.bj_bj01 ul').html(str2 + str2+str2 + str2 + '<div class="clear"></div>')
     })
     $.get('./api/php/register.php', { 'froms': 'commodity','target':'category', 'content': '绿色菜篮','operation': 'fuzzySearch' }, function (res) {
         let json = eval(res)
@@ -57,7 +73,7 @@ $(function () {
             // console.log(item) 
             let previewImg = item.previewImg.split('&')[0]
             return `
-            <li>
+            <li data-id = '${item.commodityID}'>
                         <div class="img">
                             <a target="_blank">
                                 <img src="${previewImg}" width="180px" height="180px" title="">
@@ -76,9 +92,16 @@ $(function () {
                     </li>
             `
          }).join('');
-         console.log(str2)
-          $('.bj_bj02 ul').html(str2 + str2)
+        //  console.log(str2)
+          $('.bj_bj02 ul').html(str2 + str2 + '<div class="clear"></div>')
     })
 
 
+        $('.products-box').on('click','li',function(){
+           let id = $(this).attr('data-id');
+        //    location.href = '../'
+        let url = 'http://localhost:1009/html/detail.html'+'?'+'ID='+id;
+        location.href = url;
+            
+        })
  })

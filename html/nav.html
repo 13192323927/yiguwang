@@ -5,7 +5,7 @@
 <body style="background-color:transparent">
     <div class="menu" style="border-bottom: 1px #fd7400 solid;">
         <div class="nav1">
-            <div class="all-sort">
+            <div class="all-sort" id="all-sort" name="all-sort">
                 <h2>
                     <a href="javascript:void(0);" id="eguMenuRoot">全部商品分类</a>
                     <span> </span>
@@ -149,16 +149,28 @@
          }
          chaxun(list,con);
        });
-       $('#eguMenuRoot').mouseenter(function () {
-             $('.wrap').css('display','block');
-       })
-       $('.m-1208').mouseleave(function () {
+
+
+    $('#eguMenuRoot').mouseenter(function () {
+        $('.wrap').css('display','block');
+  })
+
+
+  $('.m-1208').mouseleave(function () {
+      if($('.m-1208').attr('data') != 'index'){
         $('.wrap').css('display','none');
-       })
-       $('.item').mouseenter(function () {
-        $(this).children('.item-list').css('display','block');
-       }).mouseleave(function () {
-        $(this).children('.item-list').css('display','none');
-        })
+      } 
+   
+
+  })
+
+
+
+
+  $('.item').mouseenter(function () {
+   $(this).children('.item-list').css('display','block');
+  }).mouseleave(function () {
+   $(this).children('.item-list').css('display','none');
+   })
     })
 </script>
