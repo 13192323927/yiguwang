@@ -4,6 +4,7 @@ $(function () {
     $('#head').load("../html/head.html")
     $('#quick').load("../html/quick.html")
     $('#nav').load("../html/nav.html")
+    $('#Bottom').load("../html/bottom.html")
     // $('#nav').css('position: absolute,margin:auto,left: 0,right: 0,width:1400px')
     $.get('../api/php/register.php',{'operation':'suoyou','froms':'commodity'},function (res) { 
         //    console.log(res)

@@ -296,7 +296,7 @@
 .cp-tuijian {
     padding: 5px 0 15px 0;
     height: 270px;
-    background:red
+    /* background:red */
 }
 
 
@@ -398,8 +398,8 @@
     height: 34px;
     font-size: 16px;
     color: #666;
-    margin-top: 20px;
     position: relative;
+    margin-top: 20px;
 }
 .cplmt ul {
     float: left;
@@ -465,6 +465,10 @@ em{
     border: 1px solid #f7f7f7;
     background: #fff;
 }
+.libox{
+    border:1px solid red;
+    box-sizing: border-box
+}
 .right-cpjl li {
     padding: 8px 0;
     font-size: 12px;
@@ -492,4 +496,29 @@ em{
     display: inline-table;
     font-style: normal;
     margin-top: 3px;
+}
+#listParam dl dt{
+    float: left
+}
+.cp-juijian {
+    float: left;
+    width: 220px;
+    padding-left: 34px;
+    text-align: center;
+}
+.cp-juijian  div.img a  img {
+    max-width: 220px;
+    height: 220px;
+}
+.cp-juijian em {
+    background: #f9f9f9;
+    color: #fc1e1e;
+    font-size: 19px;
+    line-height: 50px;
+    padding: 0 3px;
+    display: block;
+    font-style: normal;
+    margin-top: 3px;
+    height: 50px;
+    text-align: center;
 }

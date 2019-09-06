@@ -59,8 +59,51 @@
                         <span class="vegetables"></span>
                         <a>绿色菜篮</a>
                     </h3>
-
                 </div>
+                <div class="item">
+                    <h3>
+                        <span class="fruits"></span>
+                        <a>新鲜水果</a>
+                    </h3>
+                </div>
+                <div class="item">
+                    <h3>
+                        <span class="vegetables"></span>
+                        <a>绿色菜篮</a>
+                    </h3>
+                </div>
+                <div class="item">
+                    <h3>
+                        <span class="fruits"></span>
+                        <a>新鲜水果</a>
+                    </h3>
+                </div>
+                <div class="item">
+                    <h3>
+                        <span class="vegetables"></span>
+                        <a>绿色菜篮</a>
+                    </h3>
+                </div>
+                <div class="item">
+                    <h3>
+                        <span class="fruits"></span>
+                        <a>新鲜水果</a>
+                    </h3>
+                </div>
+                <div class="item">
+                    <h3>
+                        <span class="vegetables"></span>
+                        <a>绿色菜篮</a>
+                    </h3>
+                </div>
+                <div class="item">
+                    <h3>
+                        <span class="fruits"></span>
+                        <a>新鲜水果</a>
+                    </h3>
+                </div>
+
+                
             </div>
         </div>
     </div>
@@ -168,9 +211,11 @@
 
 
   $('.item').mouseenter(function () {
-   $(this).children('.item-list').css('display','block');
+    let top = $(this).offset().top;
+   $(this).find('.item-list').css('display','block');
+//    $(this).find('.item-list').offset().top() 
   }).mouseleave(function () {
-   $(this).children('.item-list').css('display','none');
+   $(this).find('.item-list').css('display','none');
    })
     })
 </script>

@@ -2,15 +2,18 @@
 include 'sql.php';
 $number = isset($_REQUEST["number"])? $_REQUEST["number"] : " ";
 $pwd = isset($_REQUEST["pwd"])? $_REQUEST["pwd"] : " ";
-$name = isset($_REQUEST["name"])? $_REQUEST["name"] : " ";
-$num = isset($_REQUEST["num"])? $_REQUEST["num"] : " ";
-$operation  = isset($_REQUEST["operation"])? $_REQUEST["operation"] : "suoyou ";
+$operation  = isset($_REQUEST["operation"])? $_REQUEST["operation"] : "s ";
 
 $froms = isset($_REQUEST["froms"])? $_REQUEST["froms"] : " ";
 $target = isset($_REQUEST["target"])? $_REQUEST["target"] : " ";
-$content = isset($_REQUEST["content"])? $_REQUEST["content"] : "toplist ";
+$content = isset($_REQUEST["content"])? $_REQUEST["content"] : " ";
+
+$target2 = isset($_REQUEST["target2"])? $_REQUEST["target2"] : " ";
+$content2 = isset($_REQUEST["content2"])? $_REQUEST["content2"] : " ";
 
 
+$target3 = isset($_REQUEST["target3"])? $_REQUEST["target3"] : " ";
+$content3 = isset($_REQUEST["content3"])? $_REQUEST["content3"] : " ";
 //注册
 if ($operation =='register') {
     $sql = "INSERT INTO `$froms` VALUES ('$number', '$pwd') ";
@@ -35,7 +38,14 @@ if ($operation == 'search'){
     $arr = json_encode($data,JSON_UNESCAPED_UNICODE);
     echo $arr;
 }
-
+//搜索多个
+if ($operation == 'searchs'){
+    $res = $conn-> query(" select * from $froms where $target in($content)        ");
+    // SELECT * FROM $froms WHERE $target='".$content."'"
+    $data = $res->fetch_all(MYSQLI_ASSOC);
+    $arr = json_encode($data,JSON_UNESCAPED_UNICODE);
+    echo $arr;
+}
 
 //模糊查询
 if ($operation == 'fuzzySearch'){
@@ -72,6 +82,13 @@ if($operation == "random"){
     echo $arr;
 }
 
+if($operation == "xiugia"){
+    $res = $conn->query(" UPDATE $froms SET $target2 ='$content2' ,$target3 ='$content3'  WHERE $target = '$content' ");
+
+    $data = $res->fetch_all(MYSQLI_ASSOC);
+    $arr = json_encode($data,JSON_UNESCAPED_UNICODE);
+    echo $arr;
+}
 
 
   $conn->close();

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,125 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/cart.css">
+    <script src="../lib/jquery-3.4.1.min.js"></script>
+    <script src="../js/cart.js"></script>
 </head>
+
 <body>
-        <!-- 右侧快捷键 -->
-        <iframe src="../html/quick.html"  scrolling="no" style="vertical-align:bottom; position: fixed; height: 100%; right: 0px;z-index: 999"></iframe>
-        <!-- 页头 -->
-        <iframe src="../html/head.html"  scrolling="no" width="100%" height="282px" style="vertical-align:bottom;"></iframe>
-        <!-- 导航 -->
-        <iframe src="../html/nav.html" scrolling="no" width="100%" height="70px" style="vertical-align:bottom;"></iframe>
-        <!-- id="middle" -->
+    <!-- 页头 -->
+    <div id="head"></div>
+    <!-- 右侧快捷键 -->
+    <div id="quick"></div>
+    <!-- 导航 -->
+    <div id="nav" style="position: absolute;margin:auto;left: 0;right: 0;width:1400px"></div>
 
-        <!-- <iframe src="../lib/goodsCar/index.html"  scrolling="no" width="100%" height="100%" style="vertical-align:bottom;"></iframe> -->
 
-        <!-- 页尾 -->
-        <iframe src="../html/bottom.html"  scrolling="no" width="100%" height="510px" style="border:0px;padding:0px;margin:0px"></iframe>
+    <div id="index-content">
 
-    
+
+
+
+
+        <div class="index-content">
+            <div class="cart">
+                <div class="cart-nr">
+                    <div class="cart-nr-ti">
+                        <div class="cart_tit_l dyq_index">
+                            <input id="ckbox1" type="checkbox" value="0" class="cart_checkbox fl">
+                            <a class="fl label" href="javascript:;">全选</a>
+                        </div>
+                        <span class="price">单价</span> <span class="num">数量</span> <span class="span_li_sub">合计</span>
+                        <span class="span_li_w">重量</span> <span class="span_li_w">操作</span>
+                    </div>
+                    <form action="/cart/settlement.action" method="post" name="eform" id="eform">
+
+                        <ul class="cart-nr-right">
+                            <li>
+                                <div class="cart-x">
+                                    <input name="chk_goods" type="checkbox" checked="checked"
+                                        value="57852727x720mMn1dTkj" class="cart-checkbox-x fl">
+                                </div>
+                                <div class="cart-nr-li-line">
+                                    <div class="cart-nr-li">
+                                        <div class="cart-nr-li-img">
+                                            <img
+                                                src="http://oss.egu365.com/upload/34af4012ab234f49a0e696f9aa24cb6b.jpg?x-oss-process=image/resize,h_85">
+                                        </div>
+                                        <div class="cart-nr-li-wz">
+                                            <a href="/goods/detail.action?id=57852727x720mMn1dTkj">【预售】台湾麻豆文旦柚2个装</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="li-price red">￥58.90</div>
+                                <div class="li-num">
+                                    <div class="cart-li-num">
+                                        <em><input type="button" class="cart-li-num-lf">
+                                        </em>
+                                        <em class="cart-li-num-c" id="57852727x720mMn1dTkj">4</em>
+                                        <em>
+                                            <input type="button" class="cart-li-num-ri">
+                                        </em>
+                                    </div>
+                                </div>
+                                <div class="li-sub red">￥235.60</div>
+                                <div class="li-w">1.5kg</div>
+                                <div class="cart-nr-li-hd-sc">
+                                    <a>移入收藏</a>
+                                </div>
+                                <div class="cart-nr-li-hd-de">
+                                    <a>删除</a>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                    </form>
+                    <br>
+                </div>
+                <!-- 去除广发信用卡活动 -->
+
+            </div>
+
+
+            <div class="cart">
+                <div class="cart-nr cart-nr-pa">
+                    <div class="cart-nr-js-ri">
+                        <em class="yf"></em> <em class="yf"></em> <em class="yf">购买总数</em> <em class="yf">商品总价</em> <em
+                            class="yf red"></em> <em class="yf red"></em> <em class="quantity   yf red">8</em> <em
+                            class="totalPrice yf red">￥867.60</em>
+                    </div>
+                    <div class="cart-nr-js-lf">
+                        <em>深圳市内满199元包邮</em> <em class="cart-nr-js-lf-botton"><a href="/categories.action">凑单免邮<img
+                                    src="../img/icon/red-arrow.png"></a></em>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart">
+                <div class="cart-nr cart-nr-zj">
+                    <div class="cart-x cart-qx">
+                        <input id="ckbox2" type="checkbox" value="0" style="margin-top:30px"
+                            class="cart_checkbox cart-checkbox-zj  fl">
+                        <em class="cart-nr-zj-qx cart-qx">全选</em>
+                    </div>
+                    <em class="cart-nr-zj-qx cart-nr-zj-w"><a href="/">继续购物</a></em> <em
+                        class="cart-nr-zj-botton"><a>去结算</a></em>
+                    <div class="cart-nr-zj-ri">
+                        <em class="cart-nr-zj-ri-jq">商品总价：<em class="cart-nr-zj-js"> ￥867.60</em></em> <em
+                            class="cart-nr-zj-ri-jq">已节省： ￥76.40</em>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="clear"></div>
+    <!-- 页尾 -->
+    <div id="Bottom"></div>
+
 </body>
+
 </html>

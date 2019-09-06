@@ -91,7 +91,7 @@ h2 {
     border-right: 1px #ddd solid;
 }
 .all-sort-list .item {
-    height: 30px;
+    height: 29px;
     border-top: 1px solid #FFFFFF;
     padding: 10px 0px 10px 0px;
 }
@@ -200,4 +200,7 @@ h2 {
 }
 .padding-bottom {
     padding-bottom: 10px;
+}
+.item{
+    position: relative;
 }

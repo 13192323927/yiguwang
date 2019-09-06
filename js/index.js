@@ -3,9 +3,6 @@ $(function () {
 
 
     $('#head').load("../html/head.html")
-
-
-
     $('#quick').load("../html/quick.html")
     $('#nav').load("../html/nav.html",function (response) { 
         $('.x').remove();
@@ -13,8 +10,8 @@ $(function () {
         $('.wrap').css('display','block');
         $('.m-1208').attr('data','index')
      })
-
-
+     
+     $('#Bottom').load("../html/bottom.html")
     $.get('./api/php/register.php', { 'froms': 'commodity', 'content': '5','operation': 'random' }, function (res) {
     let json = eval(res)
     var str = json.map(function (item) {
@@ -33,6 +30,9 @@ $(function () {
                                             </span>
                                         </a>
                                     </li>
+
+
+                                    
         `
      }).join('');
     //  console.log(str)
