@@ -46,10 +46,17 @@ $(function () {
 
                 $('.exit').click(function (param) {  
                 $.removeCookie('accountNumber',{ path: '/'});
-                location.reload([true])   
+                // location.reload([true])
+                location.href="../index.html"
                 })
              }
          })
         }
+          $('#search-bnt').click(function () {
+            let con = $('#searchKey').val();
+            let url = '../html/categories.html'+'?'+'ID='+con;
+            location.href = url;
+            
+        })
      })
  

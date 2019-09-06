@@ -236,7 +236,7 @@ $(function () {
                     'froms': 'shopping',
                     'operation': 'xiugia'
                 }, function (res3) { })
-
+                alert('已加入购物车')
 
         })
        })

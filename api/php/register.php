@@ -49,13 +49,20 @@ if ($operation == 'searchs'){
 
 //模糊查询
 if ($operation == 'fuzzySearch'){
-    $res = $conn-> query("select * from $froms where $target like '%$content%' ; ");
+    $res = $conn-> query("select * from $froms where $target like '%$content%' OR  $target2 LIKE '%$content%'");
     // SELECT * FROM $froms WHERE $target='".$content."'"
     $data = $res->fetch_all(MYSQLI_ASSOC);
     $arr = json_encode($data,JSON_UNESCAPED_UNICODE);
     echo $arr;
 }
-
+//模糊查询排序
+if ($operation == 'fuzzySearchPX'){
+    $res = $conn-> query("select * from $froms where $target like '%$content%' or $target2 like '%$content%' ORDER BY ($content2 +0) $content3; ");
+    // SELECT * FROM $froms WHERE $target='".$content."'"
+    $data = $res->fetch_all(MYSQLI_ASSOC);
+    $arr = json_encode($data,JSON_UNESCAPED_UNICODE);
+    echo $arr;
+}
 
 //关联查询列表
 if ($operation == 'nav') {
@@ -68,12 +75,18 @@ if ($operation == 'nav') {
   
 //查询所有
 if ($operation == 'suoyou') {
-    $res = $conn->query(" SELECT * FROM  $froms");
+    $res = $conn->query(" SELECT * FROM  $froms ");
     $data = $res->fetch_all(MYSQLI_ASSOC);
     $arr = json_encode($data,JSON_UNESCAPED_UNICODE);
     echo $arr;
 }
-
+//查询所有排序
+if ($operation == 'suoyouPX') {
+    $res = $conn->query(" SELECT * FROM  $froms ORDER BY ($content +0) $content2");
+    $data = $res->fetch_all(MYSQLI_ASSOC);
+    $arr = json_encode($data,JSON_UNESCAPED_UNICODE);
+    echo $arr;
+}
 //随机
 if($operation == "random"){
     $res = $conn->query("  SELECT   *   FROM $froms ORDER BY RAND() LIMIT $content");

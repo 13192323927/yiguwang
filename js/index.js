@@ -39,7 +39,14 @@ $(function () {
      $('.clone').html(str)
     })
 
-    $.get('./api/php/register.php', { 'froms': 'commodity','target':'category', 'content': '新鲜水果','operation': 'fuzzySearch' }, function (res) {
+    $.get('./api/php/register.php', { 
+        'froms': 'commodity',
+        'target':'category',
+        'target2' : 'commodityName',
+         'content': '新鲜水果',
+         'content2': '新鲜水果',
+         'operation': 'fuzzySearch' 
+    }, function (res) {
         let json = eval(res)
         var str2 = json.map(function (item) {
             // console.log(item) 
@@ -67,7 +74,14 @@ $(function () {
         //  console.log(str2)
           $('.bj_bj01 ul').html(str2 + str2+str2 + str2 + '<div class="clear"></div>')
     })
-    $.get('./api/php/register.php', { 'froms': 'commodity','target':'category', 'content': '绿色菜篮','operation': 'fuzzySearch' }, function (res) {
+    $.get('./api/php/register.php', { 
+        'froms': 'commodity',
+        'target':'category',
+        'target2' : 'commodityName',
+         'content': '绿色菜篮',
+         'content2': '绿色菜篮',
+         'operation': 'fuzzySearch' 
+        }, function (res) {
         let json = eval(res)
         var str2 = json.map(function (item) {
             // console.log(item) 
