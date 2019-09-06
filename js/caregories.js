@@ -1,5 +1,9 @@
 $(function () {
 
+    
+
+
+
 
     $('#head').load("../html/head.html", function () {
         let url = location.search;
