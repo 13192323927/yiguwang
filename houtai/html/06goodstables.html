@@ -37,8 +37,12 @@
                                         <th><i class="icon-resize-vertical"></i></th>
                                         <th>商品id</th>
                                         <th>商品名</th>
-                                        <th>商品单价</th>
-                                        <th>商品库存</th>
+                                        <th>商品预览图片($分割)</th>
+                                        <th>商品详情图片($分割)</th>
+                                        <th>商品规格($分割)</th>
+                                        <th>商品价格($分割)</th>
+                                        <th>商品详情($分割)</th>
+                                        <th>商品分类($分割)</th>
                                         <th>操作</th>
                                     </tr>
                                 </thead>
@@ -54,7 +58,7 @@
                                                         <button type="submit" class="btn btn-danger">删除</button>
                                                         <button type="submit" class="btn btn-info">Edit</button>
                                                     </td>
-                                                </tr> -->
+                                        </tr> -->
 
                                 </tbody>
                             </table>
@@ -83,98 +87,135 @@
         </div>
     </div>
 </body>
+<style>
+</style>
 <script src="../jquery-3.4.1.min.js"></script>
+<style>
+    input {
+        width: 80px;
+        text-align: center
+    }
+</style>
 <script>
     $(function () {
-        function init() {
-            $.ajax({
-                url: '../api/goodsoperation.php',
-                type: 'get',
-                data: {
-                    mes: 'init'
-                },
-                success: str => {
-                    let arr = JSON.parse(str);
-                    let html = '';
-                    for (let i = 0; i < arr.total; i++) {
-                        html += `<tr>
-                                    <td><input type="checkbox" /></td>
-                                    <td>${arr.group[i].gid}</td>
-                                    <td>${arr.group[i].gname}</td>
-                                    <td>${arr.group[i].price}</td>
-                                    <td class="center">${arr.group[i].stock}</td>
-                                    <td>
-                                        <button type="submit" class="btn btn-success">修改并保存</button>
-                                        <button type="submit" class="btn btn-danger">删除</button>
-                                        <button type="submit" class="btn btn-info">Edit</button>
-                                    </td>
-                                </tr>`;
-                    };
-                    $('.table tbody').html(html);
+
+        $.get('../api/register.php', { 'froms': 'commodity', 'operation': 'suoyou' }, function (res) {
+            let json = eval(res)
+
+            var str2 = json.map(function (item) {
+                // console.log(item)
+                return `
+        <tr>
+                                 <td><input type="checkbox" /></td>
+                                 <td class='commodityID'>${item.commodityID}</td>
+                                 <td><input type ="text" class="inp commodityName" value = '${item.commodityName}'  ></td>
+                                 <td><input type ="text" class="inp previewImg" value = '${item.previewImg}' ></td>
+                                 <td><input type ="text" class="inp detailsImg" value = '${item.detailsImg}'></td>
+                                 <td><input type ="text" class="inp scale01" value = '${item.scale01}' ></td>
+                                 <td><input type ="text" class="inp price01" value = '${item.price01}' ></td>
+                                 <td><input type ="text" class="inp details" value = '${item.details}' ></td>
+                                 <td><input type ="text" class="inp category" value = '${item.category}' ></td>
+                                 <td>
+                                     <button type="button" class="btn btn-success set">修改</button>
+                                    <button type="button" class="btn btn-danger remove">删除</button>
+                                     <button type="button" class="btn btn-info">Edit</button>
+                                 </td>
+                             </tr>
+        `
+            })
+            $('.table tbody').html(str2);
+
+
+
+
+            $('.inp').attr('disabled', 'false');
+
+            //修改
+
+            $('.set').click(function () {
+                let inp = $(this).parent().parent().find('.inp');
+                $(inp).removeAttr('disabled').attr('style', 'border:1px solid #000');
+
+
+                $(this).html('确定')
+                $('.set').click(function () {
+                    let a = confirm('确认修改信息？')
+
+
+                    // commodityName
+                    // previewImg
+                    // detailsImg
+                    // scale01
+                    // price01
+                    // details
+                    // category
+                    let commodityID = $(this).parent().parent().find('.commodityID').html();
+                    let commodityName = $(this).parent().parent().find('.commodityName').val();
+                    let previewImg = $(this).parent().parent().find('.previewImg').val();
+                    let detailsImg = $(this).parent().parent().find('.detailsImg').val();
+                    let scale01 = $(this).parent().parent().find('.scale01').val();
+                    let price01 = $(this).parent().parent().find('.price01').val();
+                    let details = $(this).parent().parent().find('.details').val();
+                    let category = $(this).parent().parent().find('.category    ').val();
+
+                    // console.log(
+                    //     commodityName,
+                    //     previewImg,
+                    //     detailsImg,
+                    //     scale01,
+                    //     price01,
+                    //     details,
+                    //     category
+                    // )
+                    if (a) {
+                            let content = 
+                           'UPDATE commodity SET commodityName ="'+commodityName 
+                           + '",previewImg ="'+previewImg 
+                           + '",detailsImg ="'+detailsImg
+                           +'",scale01 ="'+scale01
+                          + '",price01 ="'+price01
+                          + '",details ="'+details
+                          + '",category ="'+category
+                           + '"WHERE commodityID = '+ commodityID;
+                           console.log(content)
+                        $.get('../api/register.php',
+                            {
+                                'content': content,
+
+                                'operation': 'custom'
+                            }, function (res3) { })
+                            $(this).html('修改')
+                    }
+                });
+                
+
+            })
+
+
+            //删除
+            $('.remove').click(function () {
+                let sc = $(this).parent().parent();
+                let commodityID = $(this).parent().parent().find('.commodityID').html();
+
+                let index = $(sc).attr('data-eq')
+                let a = confirm('确认删除？')
+                if (a == true) {
+                    $(sc).remove();
+                    $.get('../api/register.php',
+                        {
+                            'content': commodityID,
+                            'target': 'commodityID',
+                            'froms': 'commodity',
+                            'operation': 'remove'
+                        }, function (res3) { })
                 }
 
+
             })
-        };
-        init();
-        /*
-				*删除功能
-			*/
-        $('.table tbody').on('click', '.btn-danger', function () {
-            let gid = $(this).parent().parent().children().eq(1).html();
-            let cfm = confirm('确定要删除吗')
-            if (cfm) {
-                $(this).parent().parent().remove();
-                $.ajax({
-                    type: 'get',
-                    url: '../api/goodsoperation.php',
-                    data: {
-                        gid: gid,
-                        mes: 'del'
-                    },
-                    success: str => {
-                        console.log(str)
-                    }
-                })
-            }
 
         })
-        /*
-            *编辑功能//contenteditable="true"
-        */
-        // $('.table tbody').on('click','.btn-info')
-        // console.log($('.btn-info'))
-        $('.table tbody').on('click', '.btn-info', function () {
-            let gid = $(this).parent().parent().children().eq(1);
-            let gname = $(this).parent().parent().children().eq(2);
-            let price = $(this).parent().parent().children().eq(3);
-            let stock = $(this).parent().parent().children().eq(4);
-            gname.attr('contenteditable', true).focus();
-            price.attr('contenteditable', true);
-            stock.attr('contenteditable', true);
-            $(this).prev().prev().click(function () {
-                $.ajax({
-                    type: 'get',
-                    url: '../api/goodsoperation.php',
-                    data: {
-                        gid: gid.html(),
-                        gname: gname.html(),
-                        price: price.html(),
-                        stock: stock.html(),
-                        mes: 'update'
-                    },
-                    success: str => {
-                        console.log(str)
-                        if (str == 'yes') {
-                            alert('修改成功');
-                            gname.attr('contenteditable', false);
-                            price.attr('contenteditable', false);
-                            stock.attr('contenteditable', false);
-                        }
-                    }
-                })
-            })
-        })
-    });
+
+    })
 </script>
 
 </html>

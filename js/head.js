@@ -54,7 +54,7 @@ $(function () {
         }
           $('#search-bnt').click(function () {
             let con = $('#searchKey').val();
-            let url = '../html/categories.html'+'?'+'ID='+con;
+            let url = '/html/categories.html'+'?'+'ID='+con;
             location.href = url;
             
         })

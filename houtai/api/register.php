@@ -94,7 +94,7 @@ if($operation == "random"){
     $arr = json_encode($data,JSON_UNESCAPED_UNICODE);
     echo $arr;
 }
-
+//修改
 if($operation == "xiugia"){
     $res = $conn->query(" UPDATE $froms SET $target2 ='$content2' ,$target3 ='$content3'  WHERE $target = '$content' ");
 
@@ -102,8 +102,22 @@ if($operation == "xiugia"){
     $arr = json_encode($data,JSON_UNESCAPED_UNICODE);
     echo $arr;
 }
+//删除
+if($operation == "remove"){
+    $res = $conn->query(" DELETE FROM $froms WHERE $target = $content ");
 
+    $data = $res->fetch_all(MYSQLI_ASSOC);
+    $arr = json_encode($data,JSON_UNESCAPED_UNICODE);
+    echo $arr;
+}
+//自定义
+if($operation == "custom"){
+    $res = $conn->query(" $content ");
 
+    $data = $res->fetch_all(MYSQLI_ASSOC);
+    $arr = json_encode($data,JSON_UNESCAPED_UNICODE);
+    echo $arr;
+}
   $conn->close();
 
 ?>

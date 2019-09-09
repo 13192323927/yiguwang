@@ -36,27 +36,13 @@
 								<thead>
 									<tr>
 										<th><i class="icon-resize-vertical"></i></th>
-										<th>id</th>
 										<th>用户名</th>
 										<th>密码</th>
-										<th>邮箱</th>
 										<th>操作</th>
 									</tr>
 								</thead>
 								<tbody>
-									<!-- <tr>
-											<td><input type="checkbox" /></td>
-											<td>1</td>
-											<td contenteditable="true">张学友</td>
-											<td>456123</td>
-											<td class="center">34242777@qq.com</td>
-											<td>
-												<button type="submit" class="btn btn-success">修改并保存</button>
-												<button type="submit" class="btn btn-danger">删除</button>
-												<button type="submit" class="btn btn-info">Edit</button>
-											</td>
-										</tr> -->
-
+									
 								</tbody>
 							</table>
 						</div>
@@ -86,100 +72,96 @@
 
 	<script src="../jquery-3.4.1.min.js"></script>
 	<script src="../common.js"></script>
+	<style>
+		.text {
+			text-align: center;
+		}
+	</style>
 	<script>
 		$(function () {
-			/*
-				*初始化函数
-			*/
-			function init() {
-				$.ajax({
-					type: 'get',
-					url: '../api/useroperation.php',
-					data: {
-						mes: 'init'
-					},
-					success: str => {
-						let arr = JSON.parse(str);
-						let html = '';
-						for (let i = 0; i < arr.total; i++) {
-							html += `<tr>
-											<td><input type="checkbox" /></td>
-											<td>${arr.group[i].uid}</td>
-											<td >${arr.group[i].username}</td>
-											<td>${arr.group[i].password}</td>
-											<td class="center">${arr.group[i].email}</td>
-											<td>
-												<button type="button" class="btn btn-success">修改并保存</button>
-												<button type="button" class="btn btn-danger">删除</button>
-												<button type="button" class="btn btn-info">Edit</button>
-											</td>
-										</tr>`
+
+			$.get('../api/register.php', { 'froms': 'user', 'operation': 'suoyou' }, function (res) {
+				let json = eval(res)
+
+				var str2 = json.map(function (item) {
+					return `
+					<tr>
+											 <td><input type="checkbox" /></td>
+										 	<td><input type ="text" class="inp"  value = '${item.number}' ></td>
+										 	<td><input type ="text" class="inp" value = '${item.pwd}' ></td>
+
+										 	<td>
+										 		<button type="button" class="btn btn-success set">修改</button>
+												<button type="button" class="btn btn-danger remove">删除</button>
+										 		<button type="button" class="btn btn-info">Edit</button>
+										 	</td>
+										 </tr>
+					`
+				})
+				$('.table tbody').html(str2);
+
+
+
+
+				$('.inp').attr('disabled', 'false');
+
+				//修改
+				$('.set').click(function () {
+					let inp = $(this).parent().parent().find('.inp');
+					console.log(inp)
+					$(inp).removeAttr('disabled').attr('style', 'border:1px solid #000');
+					$(this).html('确定')
+					$('.set').click(function () {
+					 let a = confirm('确认修改信息？')
+						if (a) {
+
+							let number = $(inp[0]).val()
+							let pwd = $(inp[1]).val()
+							console.log( number, pwd)
+							$.get('../api/register.php',
+								{
+									'content': number,
+									'target': 'number',
+
+
+									'content2': number,
+									'target2': 'number',
+									'content3': pwd,
+									'target3': 'pwd',
+									'froms': 'user',
+									'operation': 'xiugia'
+								}, function (res3) { })
 						}
-						$('.table tbody').html(html);
-						// console.log($('.btn-info'),1)
+					});
+					$(this).html('修改')
+				})
+
+
+				//删除
+				$('.remove').click(function () {
+					let inp = $(this).parent().parent().find('.inp');
+					let number = $(inp[0]).val()
+					let sc = $(this).parent().parent();
+					// console.log()
+
+					let index = $(sc).attr('data-eq')
+					let a = confirm('确认删除？')
+					if (a == true) {
+						$(sc).remove();
+						$.get('../api/register.php',
+							{
+								'content': number,
+								'target': 'number',
+								'froms': 'user',
+								'operation': 'remove'
+							}, function (res3) { })
 					}
-				})
-			}
-			init();
 
-			/*
-				*删除功能
-			*/
-			$('.table tbody').on('click', '.btn-danger', function () {
-				let uid = $(this).parent().parent().children().eq(1).html();
-				let cfm = confirm('确定要删除吗')
-				if (cfm) {
-					$(this).parent().parent().remove();
-					$.ajax({
-						type: 'get',
-						url: '../api/useroperation.php',
-						data: {
-							uid: uid,
-							mes: 'del'
-						},
-						success: str => {
-							console.log(str)
-						}
-					})
-				}
+
+				})
 
 			})
-			/*
-				*编辑功能//contenteditable="true"
-			*/
-			// $('.table tbody').on('click','.btn-info')
-			// console.log($('.btn-info'))
-			$('.table tbody').on('click', '.btn-info', function () {
-				let uid = $(this).parent().parent().children().eq(1);
-				let username = $(this).parent().parent().children().eq(2);
-				let password = $(this).parent().parent().children().eq(3);
-				let email = $(this).parent().parent().children().eq(4);
-				username.attr('contenteditable', true).focus();
-				password.attr('contenteditable', true);
-				email.attr('contenteditable', true);
-				$(this).prev().prev().click(function () {
-					$.ajax({
-						type: 'get',
-						url: '../api/useroperation.php',
-						data: {
-							uid: uid.html(),
-							username: username.html(),
-							password: password.html(),
-							email: email.html(),
-							mes: 'update'
-						},
-						success: str => {
-							console.log(str)
-							if (str == 'yes') {
-								alert('修改成功');
-								username.attr('contenteditable', false);
-								password.attr('contenteditable', false);
-								email.attr('contenteditable', false);
-							}
-						}
-					})
-				})
-			})
+
 		})
 	</script>
 </body>

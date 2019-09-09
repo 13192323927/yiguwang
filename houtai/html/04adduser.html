@@ -38,12 +38,6 @@
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label">邮箱</label>
-									<div class="controls">
-										<input type="text" autocomplete="off" name="email" id="email">
-									</div>
-								</div>
-								<div class="control-group">
 									<label class="control-label">密码</label>
 									<div class="controls">
 										<input type="text" autocomplete="off" name="date" id="date">
@@ -67,31 +61,25 @@
 	<script>
 		$(function () {
 			$('.btn-success').click(function () {
-				let username = $('#required').val().trim();
-				let email = $('#email').val().trim();
+				let number = $('#required').val().trim();
 				let password = $('#date').val().trim();
 			
-				if (username && email && password) {
+				if (number  && password) {
 					let confm = confirm('你确定要添加新用户吗')
 					if(confm){
-						$.ajax({
-							type : 'get',
-							url: '../api/useroperation.php',
-							data:{
-								username : username,
-								email : email,
-								password : password,
-								mes : 'add'
-							},
-							success: str =>{
-								if(str == 'yes'){
-									alert('添加成功');
-									$('#required').val('');
-									$('#email').val('');
-									$('#date').val('');
-								}
-							}
-						})
+						console.log(number,password)
+						$.get('../api/register.php',
+								{
+									'number': number,
+									'pwd': password,
+
+									'froms': 'user',
+									'operation': 'register'
+								}, function (res) { 
+									if (res = true) {
+										alert('添加成功')
+									}
+								})
 					}
 				}
 			})

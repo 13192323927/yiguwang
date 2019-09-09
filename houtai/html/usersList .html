@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding-left: 30px;
+        }
+
+        .breadcrumb {
+            height: 50px;
+            border: #ffffff;
+            padding: 5px;
+        }
+
+        .header h1 {
+            height: 20px;
+            font-size: 18px;
+            color: #666666;
+            float: none;
+            border-bottom: 2px solid #EE7600;
+            padding: 5px;
+            box-sizing: initial;
+            padding-bottom: 10px;
+        }
+
+        table {
+            border: 2px solid #cdcdcd;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        th,
+        td {
+            border: 2px solid #cdcdcd;
+            height: 40px;
+
+        }
+
+        td {
+            text-align: center;
+            /* height: 15px; */
+        }
+
+        a {
+            text-decoration: none;
+            /* color:  */
+        }
+
+        .operation {
+            /* display: inherit; */
+            /* text-align: center; */
+        }
+
+        .operation a {
+            display: block;
+            width: 100px;
+            font-size: 20px;
+            float: left;
+            /* text-align: center; */
+            margin: 0 10px 0;
+            color: #ffffff;
+        }
+
+        .operation .set {
+            background: #51a351
+        }
+
+        .operation .Remove {
+            background: #bd362f
+        }
+
+        .operation .Edit {
+            background: #2f96b4
+        }
+
+        .text {
+            border: none;
+            text-align: center;
+            height: 25px;
+            width: 95%;
+            background:#fff;
+        }
+    </style>
+</head>
+<script src="../js/jquery-3.4.1.min.js"></script>
+
+<body>
+    <div class="breadcrumb">主页</div>
+    <div class="header">
+        <h1>用户列表</h1>
+        <!-- <p></p> -->
+
+
+    </div>
+    <div>
+        <table style="border-collapse:collapse">
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox"> </th>
+                    <th>用户名</th>
+                    <th>密码</th>
+                    <th>昵称</th>
+                    <th>手机号码</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <input type="text" class="text id"  value="aaa" >
+                    </td>
+                    <td>
+                        <input type="text" class="text pwd">
+                    </td>
+                    <td>
+                        <input type="text" class="text name">
+                    </td>
+                    <td>
+                        <input type="text" class="text num">
+                    </td>
+                    <td>
+                        <div class="operation">
+                            <a class="set" >修改</a>
+                            <a class="Remove" >删除</a>
+                            <a class="Edit" >联系</a>
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+
+
+        </table>
+    </div>
+</body>
+<script src="../js/usersList .js"></script>
+
+</html>

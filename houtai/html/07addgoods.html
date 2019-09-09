@@ -25,6 +25,15 @@
             <div class="row-fluid">
                 <div class="span12">
                     <div class="widget-box">
+                        <!-- <th>商品id</th>
+                            <th>商品名</th>
+                            <th>商品预览图片($分割)</th>
+                            <th>商品详情图片($分割)</th>
+                            <th>商品规格($分割)</th>
+                            <th>商品价格($分割)</th>
+                            <th>商品详情($分割)</th>
+                            <th>商品分类($分割)</th>
+                            <th>操作</th> -->
                         <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
                             <h5>添加商品</h5>
                         </div>
@@ -32,51 +41,48 @@
                             <form class="form-horizontal" method="post" action="#" name="basic_validate"
                                 id="basic_validate" novalidate="novalidate">
                                 <div class="control-group">
-                                    <label class="control-label">商品名字</label>
+
+
+                                    <label class="control-label ">商品名字</label>
                                     <div class="controls">
-                                        <input type="text" name="required" id="gname">
+                                        <input type="text" class="commodityName" name="required" id="gname">
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">价格</label>
+                                    <label class="control-label">商品详情图片($分割)</label>
                                     <div class="controls">
-                                        <input type="text" autocomplete="off" name="email" id="price">
+                                        <input type="text" class="previewImg" autocomplete="off" name="email"
+                                            id="price">
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">库存</label>
+                                    <label class="control-label">商品详情图片($分割)</label>
                                     <div class="controls">
-                                        <input type="text" autocomplete="off" name="date" id="stock">
+                                        <input type="text" class="detailsImg" autocomplete="off" name="date" id="stock">
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">图片路径</label>
+                                    <label class="control-label">商品规格($分割)</label>
                                     <div class="controls">
-                                        <input type="text" name="required" id="picurl">
+                                        <input type="text" class="scale01" name="required" id="picurl">
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">作者</label>
+                                    <label class="control-label">商品价格($分割)</label>
                                     <div class="controls">
-                                        <input type="text" name="required" id="author">
+                                        <input type="text" class="price01" name="required" id="author">
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">出版社</label>
+                                    <label class="control-label">商品详情($分割)</label>
                                     <div class="controls">
-                                        <input type="text" name="required" id="press">
+                                        <input type="text" class="details" name="required" id="press">
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">出版时间</label>
+                                    <label class="control-label">商品分类($分割)</label>
                                     <div class="controls">
-                                        <input type="text" name="required" id="time">
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label">简介</label>
-                                    <div class="controls">
-                                        <input type="text" name="required" id="intro">
+                                        <input type="text" class="category" name="required" id="time">
                                     </div>
                                 </div>
                                 <div class="form-actions">
@@ -95,42 +101,66 @@
 </body>
 <script src="../common.js"></script>
 <script>
-    $(function () {
-        $('.btn-success').click(function () {
-            let gname = $('#gname').val().trim();
-            let price = $('#price').val().trim();
-            let stock = $('#stock').val().trim();
-            let picurl = $('#picurl').val().trim();
-            let press = $('#press').val().trim();
-            let time = $('#time').val().trim();
-            let intro = $('#intro').val().trim();
-            let author = $('#author').val().trim();
 
-            if (gname && price && stock && picurl && press && time && intro && author) {
-                let confm = confirm('你确定要添加新用户吗')
+    $(function () {
+
+
+
+
+
+        $('.btn-success').click(function () {
+
+            let commodityName = $('.commodityName').val().trim();
+            let previewImg = $('.previewImg').val().trim();
+            let detailsImg = $('.detailsImg').val().trim();
+            let scale01 = $('.scale01').val().trim();
+            let price01 = $('.price01').val().trim();
+            let details = $('.details').val().trim();
+            let category = $('.category').val().trim();
+
+            if (commodityName && previewImg && detailsImg && scale01 && price01 && details && category) {
+                let confm = confirm('你确定要添加新商品吗')
                 if (confm) {
-                    $.ajax({
-                        type: 'get',
-                        url: '../api/goodsoperation.php',
-                        data: {
-                            gname: gname,
-                            price: price,
-                            stock: stock,
-                            picurl : picurl,
-                            press : press,
-                            time : time,
-                            intro : intro,
-                            author : author,
-                            mes: 'add'
-                        },
-                        success: str => {
-                            console.log(str);
-                            if (str == 'yes') {
-                                alert('添加成功');
-                                $('.controls input').val('');
-                            }
-                        }
+
+
+
+
+                    let commodityID = 50
+                    //    console.log( 
+                    //  commodityID,
+                    //     commodityName,
+                    //     previewImg,
+                    //     detailsImg,
+                    //     scale01,
+                    //     price01,
+                    //     details,
+                    //     category
+                    //    )
+                    $.get('../api/register.php', { 'froms': 'commodity', 'operation': 'suoyou' }, function (res) {
+                        let json = eval(res)
+                        let arr = new Array
+                        var str2 = json.map(function (item) {
+                            arr.push(item.commodityID);
+                        })
+                        //  console.log(arr)
+                        commodityID = Math.max.apply(null, arr) + 1;
+                        let content =
+                            "INSERT INTO commodity (commodityID,commodityName, previewImg,detailsImg,scale01,price01,details, category) VALUES ("
+                            + commodityID + "," + commodityName + "," + previewImg + "," + detailsImg + "," + scale01 + "," + price01 + "," + details + "," + category + ")";
+                        console.log(content)
+                        $.get('../api/register.php',
+                            {
+                                'content': content,
+
+                                'operation': 'custom'
+                            }, function (res) { 
+                                console.log('添加成功')
+                            })
                     })
+
+
+
+
                 }
             }
         })
